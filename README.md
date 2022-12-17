@@ -1,1 +1,1 @@
-Simple Shell project page.
+Simple Shell project page
