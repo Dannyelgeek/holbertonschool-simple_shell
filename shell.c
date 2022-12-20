@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void main (void)
+int main(void)
 {
 	size_t size = 1024;
 	pid_t pid;
@@ -8,7 +8,7 @@ void main (void)
 	int val;
 	
 	if (!buff)
-		return;
+		return (0);
 	while(1)
 	{
 		printf("$ ");
@@ -31,4 +31,5 @@ void main (void)
 			wait(NULL);
 	}
 	free(buff);
+	return (0);
 }
