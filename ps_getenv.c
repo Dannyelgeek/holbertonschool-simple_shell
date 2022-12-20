@@ -36,7 +36,6 @@ char *_getenv(char *name)
 void _cmd(char *cmd, char **argv)
 {
     char *tkn = NULL, *cp_path = NULL, *path = NULL;
-    int i = 0;
     struct stat st;
 
     cp_path = strdup(_getenv("PATH"));

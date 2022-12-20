@@ -25,4 +25,5 @@ char **tokenizer(char *cmd)
         exec(argv);
 
     _cmd(argv[0], argv);
+    return (NULL);
 }
