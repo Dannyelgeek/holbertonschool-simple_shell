@@ -52,4 +52,5 @@ void _cmd(char *cmd, char **argv)
     }
     argv[0] = strdup(path);
     exec(argv);
+    free(path);
 }
