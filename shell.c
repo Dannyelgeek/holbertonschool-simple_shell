@@ -42,6 +42,6 @@ void handler(int i)
 {
     if (i)
     {
-        write(STDOUT_FILENO, "\n$ ", strlen("\n$ "));
+        write(STDOUT_FILENO, "\n$ ", 4);
     }
 }
