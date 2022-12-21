@@ -17,5 +17,7 @@ void _cmd(char *cmd, char **argv);
 char **tokenizer(char *cmd);
 void exec(char **argv);
 void exit_shell(void);
+void handler(int i);
+int env(void);
 
 #endif

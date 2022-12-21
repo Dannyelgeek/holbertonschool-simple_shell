@@ -59,8 +59,10 @@ void _cmd(char *cmd, char **argv)
     if (strcmp(argv[0], "exit") == 0)
     {
         printf("algo");
-        exit(EXIT_SUCCESS);
+        exit(1);
     }
-        
+
+    if (strcmp(argv[0], "env") == 0)
+        env();
     perror("not found");
 }
