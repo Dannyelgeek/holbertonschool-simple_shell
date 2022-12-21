@@ -18,7 +18,6 @@ int main(void)
         val = getline(&buff, &size, stdin);
         if (val == -1)
         {
-            printf("exit\n");
             exit(WEXITSTATUS(status));
         }
         if (strcmp(buff, "exit\n") == 0)
