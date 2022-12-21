@@ -19,14 +19,18 @@ int main(void)
         if (val == -1)
         {
             printf("exit\n");
-            exit(-1);
+            exit(WEXITSTATUS(status));
+        }
+        if (strcmp(buff, "exit\n") == 0)
+            exit(WEXITSTATUS(status));
+        if (strcmp(buff, "env\n") == 0)
+        {
+            env();
+            continue;
         }
         pid = fork();
         if (!pid)
-        {
             tokenizer(buff);
-            break;
-        }
         else
             wait(&status);
     }

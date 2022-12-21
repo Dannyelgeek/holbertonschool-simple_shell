@@ -35,7 +35,7 @@ char *_getenv(char *name)
 
 void _cmd(char *cmd, char **argv)
 {
-    char *tkn = NULL, *cp_path = NULL, *path = NULL;
+    char *tkn = NULL, *cp_path = NULL, *path = cmd;
     struct stat st;
 
     cp_path = strdup(_getenv("PATH"));
@@ -43,26 +43,13 @@ void _cmd(char *cmd, char **argv)
     tkn = strtok(NULL, "\0");
     tkn = strtok(tkn, ":");
 
-    while (tkn)
+    while (tkn && stat(path, &st) != 0)
     {
         path = malloc(sizeof(char) * strlen(tkn) + strlen(cmd) + 1);
         strcat(path, tkn), strcat(path, "/"), strcat(path, cmd);
 
-        if (stat(path, &st) == 0)
-        {
-            argv[0] = strdup(path);
-            exec(argv);
-        }
         tkn = strtok(NULL, ":");
     }
-
-    if (strcmp(argv[0], "exit") == 0)
-    {
-        printf("algo");
-        exit(1);
-    }
-
-    if (strcmp(argv[0], "env") == 0)
-        env();
-    perror("not found");
+    argv[0] = strdup(path);
+    exec(argv);
 }
