@@ -14,7 +14,8 @@ int main(void)
 
     while (1)
     {
-        printf("$ ");
+        if (isatty(STDIN_FILENO))
+            printf("$ ");
         val = getline(&buff, &size, stdin);
         if (val == -1)
         {
