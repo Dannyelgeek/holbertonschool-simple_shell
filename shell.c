@@ -1,6 +1,9 @@
 #include "shell.h"
 
-
+/**
+ * main - creates a prompt and awaits for commands.
+ * Return: 0 if exited correctly.
+*/
 
 int main(void)
 {
@@ -41,10 +44,15 @@ int main(void)
 	return (0);
 }
 
+/**
+ * handler - Goes back to prompt after typing ^C.
+ * @i: variable.
+*/
+
 void handler(int i)
 {
 	if (i)
 	{
-		write(STDOUT_FILENO, "\n$ ", 4);
+		write(STDOUT_FILENO, "\nHoly_Shell> ", _strlen("\nHoly_Shell> "));
 	}
 }

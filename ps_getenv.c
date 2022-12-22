@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * _getenv - gets the "PATH" path from the enviroment.
+ * @name: variable.
+ * Return: NULL if exited correctly.
+*/
+
 char *_getenv(char *name)
 {
 	int i = 0;
@@ -28,10 +34,11 @@ char *_getenv(char *name)
 	return (NULL);
 }
 
-/*void exit_shell(void)
-{
-	exit(EXIT_SUCCESS);
-}*/
+/**
+ * _cmd - recives path "PATH" and tokenizes it.
+ * @cmd: prompt command.
+ * @argv: excecutable argument.
+*/
 
 void _cmd(char *cmd, char **argv)
 {
@@ -55,16 +62,25 @@ void _cmd(char *cmd, char **argv)
 	free(path);
 }
 
+/**
+ * env - prints the current enviroment.
+ * Return: 0 if exited correctly.
+*/
+
 int env(void)
 {
 	int i;
-	extern char **environ;
 
 	for (i = 0; environ[i] != NULL; i++)
 		printf("%s\n", environ[i]);
 
 	return (0);
 }
+
+/**
+ * exec - excecute the prompt command if exist.
+ * @argv: excecutable argument.
+*/
 
 void exec(char **argv)
 {

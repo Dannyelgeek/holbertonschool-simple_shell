@@ -48,13 +48,14 @@ int _strlen(char *s)
  * _strncmp - code
  * @s1: pointer
  * @s2: pointer
- * n: 
+ * @n: bytes number to compare.
  * Return: 0
  */
 
 int _strncmp(char *s1, char *s2, int n)
 {
 	int x;
+
 	x = 0;
 	while (x < n)
 	{
