@@ -21,9 +21,9 @@ int main(void)
         {
             exit(WEXITSTATUS(status));
         }
-        if (strcmp(buff, "exit\n") == 0)
+        if (_strcmp(buff, "exit\n") == 0)
             exit(WEXITSTATUS(status));
-        if (strcmp(buff, "env\n") == 0)
+        if (_strcmp(buff, "env\n") == 0)
         {
             env();
             continue;

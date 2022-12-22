@@ -16,9 +16,13 @@ char *_getenv(char *name);
 void _cmd(char *cmd, char **argv);
 char **tokenizer(char *cmd);
 void exec(char **argv);
-void exit_shell(void);
 void handler(int i);
 int env(void);
 void *_calloc(unsigned int nmemb, unsigned int size);
+int _strcmp(char *s1, char *s2);
+int _strlen(char *s);
+int _strncmp(char *s1, char *s2, int n);
+char *_strcpy(char *dest, char *src);
+char *_strcat(char *dest, char *src);
 
 #endif

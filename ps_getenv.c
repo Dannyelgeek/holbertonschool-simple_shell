@@ -5,19 +5,19 @@ char *_getenv(char *name)
     int i = 0;
     char *val;
 
-    unsigned long lenValue, lenName = strlen(name);
+    unsigned long lenValue, lenName = _strlen(name);
 
     while (environ[i] != NULL)
 
     {
-        lenValue = strlen(environ[i]);
+        lenValue = _strlen(environ[i]);
         val = malloc(lenValue * sizeof(char));
         if (val == NULL)
         {
             perror("failed to allocate value");
             return (NULL);
         }
-        if (strncmp(name, environ[i], lenName) == 0 && strcpy(val, environ[i]))
+        if (_strncmp(name, environ[i], lenName) == 0 && _strcpy(val, environ[i]))
         {
             return (val);
         }
@@ -45,12 +45,29 @@ void _cmd(char *cmd, char **argv)
 
     while (tkn && stat(path, &st) != 0)
     {
-        path = malloc(sizeof(char) * strlen(tkn) + strlen(cmd) + 1);
-        strcat(path, tkn), strcat(path, "/"), strcat(path, cmd);
+        path = malloc(sizeof(char) * _strlen(tkn) + _strlen(cmd) + 1);
+        _strcat(path, tkn), _strcat(path, "/"), _strcat(path, cmd);
 
         tkn = strtok(NULL, ":");
     }
     argv[0] = strdup(path);
     exec(argv);
     free(path);
+}
+
+int env(void)
+{
+    int i;
+    extern char **environ;
+
+    for (i = 0; environ[i] != NULL; i++)
+        printf("%s\n", environ[i]);
+
+    return (0);
+}
+
+void exec(char **argv)
+{
+    if (execve(argv[0], argv, environ) == -1)
+        perror("not found");
 }
