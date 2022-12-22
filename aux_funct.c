@@ -54,17 +54,17 @@ int _strlen(char *s)
 
 int _strncmp(char *s1, char *s2, int n)
 {
-    int x;
-    x = 0;
-    while (x < n)
-    {
-        if (s1[x] != s2[x])
-        {
-            return (s1[x] - s2[x]);
-        }
-        x++;
-    }
-    return (0);
+	int x;
+	x = 0;
+	while (x < n)
+	{
+		if (s1[x] != s2[x])
+		{
+			return (s1[x] - s2[x]);
+		}
+		x++;
+	}
+	return (0);
 }
 
 /**
