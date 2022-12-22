@@ -20,3 +20,7 @@ This repository contains all the necessary files to run a Simple Shell with some
 ## known bugs:
 
 * when the user types an argument that the shell does not accept as a command and then types the command exit, the shell will not effectively exit on the first try.
+
+## Flowchart:
+
+<img src="https://imgur.com/uooUqjF.png"/>
