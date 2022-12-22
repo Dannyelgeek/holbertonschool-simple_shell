@@ -1,3 +1,4 @@
+<img src="https://imgur.com/1lH1hJz.png" width=400 height=auto/>
 <img src="https://imgur.com/Ulbbb4m.png" width=400 height=400/>
 
 # Simple Shell
