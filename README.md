@@ -3,3 +3,16 @@
 ## Simple Shell
 
 This repository contains all the necessary files to run a Simple Shell with some of the most used commands (ls, pwd, echo, cat).This shell interface was created from the C programming language, it gives the user a prompt "Holy_Shell>"; when entering a command accepted by the shell, it will be executed in a child process.
+
+## This Shell has the following characteristics:
+
+* This program automatically displays a prompt for the user to enter a command to be executed.
+* The command line will always end on a new line when the user presses ENTER.
+* when a command finishes executing, the prompt will appear again on a new line.
+* when the user types the exit command, the program will exit and display the original LINUX prompt again.
+* the program will stop when the user types CTRL + D (end of file).
+* This shell handles the command line as arguments or as paths.
+* The user will not exit this shell by typing ^C (CTRL + C).
+* If the user types the env command, it will print the current work environment.
+* if the shell does not find any commands within the given path, it will print an error message.
+* This shell does not support wildcards, pipes, or logical operators (*, |, &&, ||).
