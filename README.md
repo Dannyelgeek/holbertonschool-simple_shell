@@ -16,3 +16,7 @@ This repository contains all the necessary files to run a Simple Shell with some
 * If the user types the env command, it will print the current work environment.
 * if the shell does not find any commands within the given path, it will print an error message.
 * This shell does not support wildcards, pipes, or logical operators (* , | , && , ||).
+
+## known bugs:
+
+* when the user types an argument that the shell does not accept as a command and then types the command exit, the shell will not effectively exit on the first try.
