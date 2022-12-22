@@ -42,6 +42,7 @@ This repository contains all the necessary files to run a Simple Shell with some
 
 * ls
 
-``Holy_Shell> ls
-README.md  aux_funct.c  hsh  ps_getenv.c  shell.c  shell.h  tokenizer.c``
-
+```shell
+Holy_Shell> ls
+README.md  aux_funct.c  hsh  ps_getenv.c  shell.c  shell.h  tokenizer.c
+```
