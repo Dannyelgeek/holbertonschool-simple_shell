@@ -36,4 +36,12 @@ This repository contains all the necessary files to run a Simple Shell with some
 * Your code should use the `Betty` style. It will be checked using betty-style.pl and betty-doc.pl
 * Your shell should not have any memory leaks
 * No more than 5 functions per file
-* All your header files should be include guarded
+* All your header files should be include guarded.
+
+## Examples:
+
+* ls
+
+``Holy_Shell> ls
+README.md  aux_funct.c  hsh  ps_getenv.c  shell.c  shell.h  tokenizer.c``
+
