@@ -56,24 +56,28 @@ This repository contains all the necessary files to run a Simple Shell with some
 
 
 Holy_Shell> ls
+
 README.md  aux_funct.c  hsh  ps_getenv.c  shell.c  shell.h  tokenizer.c
 
     pwd
 
 
 Holy_Shell> pwd
+
 /home/dannyelgeek/holbertonschool-simple_shell
 
     echo
 
 
 Holy_Shell> echo Hello World
+
 Hello World
 
 
     cat
 
 Holy_Shell> cat shell.c
+
 #include "shell.h"
 
 
