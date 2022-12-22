@@ -27,7 +27,7 @@ This repository contains all the necessary files to run a Simple Shell with some
 
 ## Requirements:
 
-*General*
+# General.
 
 * Allowed editors: `vi`, `vim`, `emacs`
 * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options `-Wall` `-Werror` `-Wextra` `-pedantic` `-std=gnu89`
@@ -37,4 +37,3 @@ This repository contains all the necessary files to run a Simple Shell with some
 * Your shell should not have any memory leaks
 * No more than 5 functions per file
 * All your header files should be include guarded
-* Use system calls only when you need to (why?)
