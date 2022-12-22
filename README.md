@@ -2,4 +2,4 @@
 
 ## Simple Shell
 
-Buenas tardes este es un mensaje bobo.
+This repository contains all the necessary files to run a Simple Shell with some of the most used commands (ls, pwd, echo, cat).This shell interface was created from the C programming language, it gives the user a prompt "Holy_Shell>"; when entering a command accepted by the shell, it will be executed in a child process.
