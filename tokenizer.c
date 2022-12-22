@@ -7,7 +7,7 @@ char **tokenizer(char *cmd)
 	int argc = 0, i = 0;
 	struct stat st;
 
-	cmdcpy = strdup(cmd);
+	cmdcpy = _strdup(cmd);
 	token = strtok(cmd, " \n");
 
 	while (token)

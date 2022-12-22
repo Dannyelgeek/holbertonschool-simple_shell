@@ -38,7 +38,7 @@ void _cmd(char *cmd, char **argv)
 	char *tkn = NULL, *cp_path = NULL, *path = cmd;
 	struct stat st;
 
-	cp_path = strdup(_getenv("PATH"));
+	cp_path = _strdup(_getenv("PATH"));
 	tkn = strtok(cp_path, "=");
 	tkn = strtok(NULL, "\0");
 	tkn = strtok(tkn, ":");
@@ -50,7 +50,7 @@ void _cmd(char *cmd, char **argv)
 
 		tkn = strtok(NULL, ":");
 	}
-	argv[0] = strdup(path);
+	argv[0] = _strdup(path);
 	exec(argv);
 	free(path);
 }
