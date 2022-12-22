@@ -15,4 +15,4 @@ This repository contains all the necessary files to run a Simple Shell with some
 * The user will not exit this shell by typing ^C (CTRL + C).
 * If the user types the env command, it will print the current work environment.
 * if the shell does not find any commands within the given path, it will print an error message.
-* This shell does not support wildcards, pipes, or logical operators (*, |, &&, ||).
+* This shell does not support wildcards, pipes, or logical operators (* , | , && , ||).
