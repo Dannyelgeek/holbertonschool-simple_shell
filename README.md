@@ -1,5 +1,5 @@
-<img src="https://imgur.com/1lH1hJz.png" width=400 height=auto/>
-<img src="https://imgur.com/Ulbbb4m.png" width=400 height=400/>
+<center> <img src="https://imgur.com/1lH1hJz.png" width=400 height=auto/> </center>
+<center> <img src="https://imgur.com/Ulbbb4m.png" width=400 height=400/> </center>
 
 # Simple Shell
 
