@@ -15,7 +15,7 @@ int main(void)
     while (1)
     {
         if (isatty(STDIN_FILENO))
-            printf("$ ");
+            printf("Holy_Shell> ");
         val = getline(&buff, &size, stdin);
         if (val == -1)
         {
