@@ -24,16 +24,6 @@ int main(void)
 		if (isatty(STDIN_FILENO))
 			printf("Holy_Shell> ");
 		val = getline(&buff, &size, stdin);
-		if (strcmp(buff, " ") == 0)
-        {
-            free(buff);
-            continue;
-        }
-		if (strcmp(buff, "\n") == 0)
-        {
-            free(buff);
-            continue;
-        }
 		if (val == -1)
 		{
 			free(buff);
