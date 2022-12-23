@@ -17,13 +17,18 @@ char **tokenizer(char *cmd)
 	token = strtok(cmd, " \n");
 
 	while (token)
-		token = strtok(NULL, " \n"), argc++;
+	{
+		token = strtok(NULL, " \n");
+		argc++;
+	}
 
 	argv = (char **)malloc(sizeof(char *) * (argc + 1));
 	token = strtok(cmdcpy, " \n");
+
 	while (token)
 	{
-		argv[i] = token, token = strtok(NULL, " \n");
+		argv[i] = token;
+		token = strtok(NULL, " \n");
 		i++;
 	}
 	argv[i] = NULL;

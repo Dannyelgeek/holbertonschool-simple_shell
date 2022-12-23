@@ -3,32 +3,37 @@
 /**
  * main - creates a prompt and awaits for commands.
  * Return: 0 if exited correctly.
-*/
+ */
 
 int main(void)
 {
 	size_t size = 1024;
 	pid_t pid;
-	char *buff = malloc(sizeof(char) * size);
+	char *buff;
 	int val;
 	int status;
-
-	if (!buff)
-		return (0);
 
 	signal(SIGINT, handler);
 
 	while (1)
 	{
+		buff = malloc(sizeof(char) * size);
+		if (!buff)
+			return (0);
+
 		if (isatty(STDIN_FILENO))
 			printf("Holy_Shell> ");
 		val = getline(&buff, &size, stdin);
 		if (val == -1)
 		{
+			free(buff);
 			exit(WEXITSTATUS(status));
 		}
 		if (_strcmp(buff, "exit\n") == 0)
+		{
+			free(buff);
 			exit(WEXITSTATUS(status));
+		}
 		if (_strcmp(buff, "env\n") == 0)
 		{
 			env();
@@ -39,15 +44,15 @@ int main(void)
 			tokenizer(buff);
 		else
 			wait(&status);
+		free(buff);
 	}
-	free(buff);
 	return (0);
 }
 
 /**
  * handler - Goes back to prompt after typing ^C.
  * @i: variable.
-*/
+ */
 
 void handler(int i)
 {
